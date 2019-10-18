@@ -14,7 +14,7 @@ plugins: [jekyll-feed]
 url: http://ovipaul.github.io/
 baseurl: /
 author: Ovi Paul
-title: Ovi Paul's Page
+title: Ovi Paul
 description: Personal Landing Page
 avatar: paul.jpg
 
