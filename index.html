@@ -1,44 +1,82 @@
----
-layout: layout
----
-<div class="container">
-  <div class="row">
-    <div class="col-md-3" style="text-align:center;">
-        
-      <div class="avatar">
-          
-    	   <img class="rounded-circle" src="{{ site.baseurl }}static/img/{{ site.avatar }}" alt="Responsive image" style="max-width: 70%; height: auto;">
-      </div>
-      <h5>Ovi Paul</h5>
-    </br>
-      <h5>Researcher/Software Developer</h5>
-    </br>
-      {% include social.html %}
-    </div>
-    <div class="col-md-9">
-      <h1><strong>I come in peace!</strong></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Ovi Paul's portfolio website">
+	<title>Ovi Paul</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
 
-      <p>I am a Researcher at <a href="http://www.cvcrbd.org/">Artificial Intelligence and Cybernetics Lab</a>, in Dhaka, Bangladesh.
-      Previously did my Bachelor in Science from <a href="http://www.cse.iub.edu.bd/">Computer Science & Engineering 
-      Department</a> at IUB. Full time computer scientist and part time economist.</p> 
+<body>
+		<img src="resources/images/ovipaul.jpg" alt="ovipaul" width="100" height="100" style ="display:block; margin-left: auto; margin-right: auto; margin-top:20px; border-radius:50%">
+		<h1 style="color:#191919;margin-left: 10px;font-size: 50px;font-family:Raleway-Bold;text-align:center;">Ovi Paul</h1>
+		<h2 style="color: #191919;margin-left: 15px;font-size: 25px;font-family:Raleway;text-align:center">Researcher | developer</h2>
+		<div style ="text-align:center; margin-top:20px">
+			<a class="interweb" href="https://twitter.com/itsAllOgreNow"><img src="resources/images/twitter.png" alt="twitter" width="30" height="30"></a>
+			<a class="interweb" href="https://github.com/ovipaul"><img src="resources/images/github.png" alt="github" width="30" height="30"></a>
+			<a class="interweb" href="https://linkedin.com/in/ovipaul"><img src="resources/images/linkedin.png" alt="linkedin" width="30" height="30"></a>
+			<a class="interweb" href="https://medium.com/@ovipaulcs"><img src="resources/images/medium.png" alt="medium" width="30" height="30"></a>
+			<a class="interweb" href="mailto:ovipaulcs@gmail.com"><img src="resources/images/mail.png" alt="mail" width="30" height="30"></a>
+		</div>
 
-      <p>My interests span Software Development, Data Science, Machine Learning, Natural Language Processing,
-        Computational Economics etc. Current research includedes Remote Sensing data's implications on Dhaka City.</p>
+		<br>
 
-      <p>Check out my <a href="http://github.com/ovipaul">Coding Projects</a>,
-        
-       <a href="https://scholar.google.co.uk/citations?user=W6Tee4QAAAAJ&hl"> Research Publications</a>,
-        and <em><a href="{{ site.baseurl }}static/resume.pdf">Curriculum Vitae</a></em>.
-        Feel free to contact me by email at <a href="ovipaulcs@gmail.com">ovipaulcs@gmail.com</a>.</p>
-      </br>
+		<h3 class="centered" style="color: #191919;font-size: 25px;font-family:Raleway-Bold">About Me</h3>
+		<p class="centered" style="font-family:Raleway; margin-top:10px">I am a freshman at Stanford University studying Computer Science! I love writing code, particularly in <span class="orange-highlight">Python</span> and <span class="orange-highlight">Swift</span>.</p>
 
-      <h4><strong>Publications</strong></h4>
-      <p>Deep-learning coupled with novel categorization method to classify  the urban environment of the developing world. [Proceedings]</p>
-      <p>A Novel Disaster Image Data-set and Characteristics Analysis
-      using Attention Model. [Proceedings]</p>
-      <p>LULC Segmentation of RGB Satellite Image Using FCN-8. [Book Chapter]</p>
-      <p><a href="https://ieeexplore.ieee.org/document/8554910">
-        Image Pre-processing on NumtaDB for Bengali Handwritten Digit Recognition. [Conference Paper]</a></p>
-    </div>
-  </div>
-</div>
+		<p class="centered" style="font-family:Raleway">I believe in the importance of <span class="orange-highlight">equal access to computer science education</span>. I love teaching workshops about computer science topics that I've studied. Past workshops I've hosted include Raspberry Pi & Python, Intro to Machine Learning, and Control Structures in Swift. I also write Turkish articles on iOS programming and design principles at <span class="orange-highlight">TurkishKit</span>.</p>
+
+		<p class="centered" style="font-family:Raleway">Last year, I attended WWDC18 as a <span class="orange-highlight">Scholarship Recipient</span>, and showcased my playground at the <span class="orange-highlight">Swift Educator Summit</span> in Berlin.</p>
+
+		<p class="centered" style="font-family:Raleway">Besides programming, I enjoy working on designs in Adobe Illustrator, tending to my Animal Crossing town, reading any book I can get my hands on, and going to the gym.</p>
+
+		<hr class="centered" style="border: 0.5px solid #dcdcdc;">
+		<br>
+
+		<h3 class="centered" style="color: #191919;font-size: 25px;font-family:Raleway-Bold;">Things I've Made</h3>
+		<!-- <p class="centered" style="font-family:Raleway; margin-top:10px"><a style="color:#191919" href="https://github.com/nadintamer/What-Makes-A-Great-Poet">What Makes a Great Poet?</a><br>
+		<em>My WWDC19 Scholarship application playground. Accompany Mr. Whiskers on his journey through poetry and watch his attempts to imitate some great poets!</em></p>
+
+		<p class="centered" style="font-family:Raleway"><a style="color:#191919" href="https://github.com/nadintamer/The-Code-of-Life">The Code of Life</a><br>
+		<em>My accepted WWDC18 Scholarship playground book. Revolves around teaching kids to code in Swift while also exploring the nature of DNA.</em></p>
+
+		<p class="centered" style="font-family:Raleway"><a style="color:#191919" href="https://github.com/nadintamer/Spotify-Predict-ML">Predicting Song Owner from Audio Features</a><br>
+		<em>Predicting a song's owner from its audio features, using the Spotify Web API and scikit-learn</em></p> -->
+
+		<p class="centered" style="font-family:Raleway"><a style="color: #191919" href="https://github.com/ovipaul/"><span class="blue-highlight"><u>View more on GitHub</u></span></a></p>
+
+		<hr class="centered" style="border: 0.5px solid #dcdcdc;">
+		<br>
+
+		<h3 class="centered" style="color: #191919;font-size: 25px;font-family:Raleway-Bold;">Things I've Written</h3>
+		<!-- <p class="centered" style="font-family:Raleway"><a style="color:#191919" href="https://medium.com/turkishkit/completion-handler-giriş-24da7cbd93c8">Completion Handler: Giriş</a><br>
+		<em><span lang="tr">Completion handler, Swift kodu yazarken size birçok durumda yardımcı olacaktır. Gelin ne olduğunu ve nasıl kodlandığını öğrenelim!</span></em></p>
+
+		<span lang="tr"><p class="centered" style="font-family:Raleway; margin-top:10px"><a style="color:#191919" href="https://medium.com/turkishkit/onboarding-ve-launch-ekranı-yapma-a747c0b2cf0b">Onboarding ve Launch Ekranı Yapma</a><br>
+		<em>Gelin birlikte uygulama deneyimini daha pürüzsüz hale getiren onboarding ve launch ekranlarını yapmayı öğrenelim!</em></p></span>
+
+		<p class="centered" style="font-family:Raleway; margin-top:10px"><a style="color:#191919" href="https://medium.com/turkishkit/uiaccessibility-ile-erişilebilirlik-accessibility-inspector-5d8de90c9cf">UIAccessibility ile Erişilebilirlik: Accessibility Inspector</a><br>
+		<em><span lang="tr">UIAccessibility ile daha erişebilir hale getirdiğiniz uygulamanızı, Accessibility Inspector sayesinde kolaylıkla test etmeyi öğrenin!</span></em></p> -->
+
+		<p class="centered" style="font-family:Raleway"><a style="color: #191919" href="https://medium.com/@ovipaulcs/"><span class="blue-highlight"><u>View more on Medium</u></span></a></p>
+
+		<hr class="centered" style="border: 0.5px solid #dcdcdc;">
+		<br>
+
+		<!-- <h3 class="centered" style="color: #191919;font-size: 25px;font-family:Raleway-Bold;">Featured In</h3>
+		<span lang="tr"><p class="centered" style="font-family:Raleway; margin-top:10px">
+			<a style="color:#191919" href="http://www.hurriyet.com.tr/teknoloji/kodlama-ogrenmeye-basladi-hayati-degisti-41156656">Kodlama öğrenmeye başladı, hayatı değişti (Hürriyet)</a><br>
+			<a style="color:#191919" href="https://www.ntv.com.tr/teknoloji/herkes-kod-yazabilir-kiz-ogrenciler-swift-ile-kodlama-ogrendi,sO9acawBgUenl-zSpFuOlQ">Herkes Kod Yazabilir: Kız Öğrenciler Swift ile Kodlama Öğrendi! (NTV)</a><br>
+			<a style="color:#191919" href="https://www.dha.com.tr/teknoloji/kiz-ogrenciler-swift-ile-kodlama-ogrendi/haber-1630544">Kız öğrenciler Swift ile kodlama öğrendi (DHA)</a>
+		</p></span> -->
+
+		<div style ="text-align:center; margin-bottom:20px">
+			<!-- <a class="interweb" href="https://twitter.com/nadouttahere"><img src="resources/images/twitter.png" alt="twitter" width="20" height="20"></a> -->
+			<a class="interweb" href="https://github.com/ovipaul"><img src="resources/images/github.png" alt="github" width="20" height="20"></a>
+			<a class="interweb" href="https://linkedin.com/in/ovipaul"><img src="resources/images/linkedin.png" alt="linkedin" width="20" height="20"></a>
+			<a class="interweb" href="https://medium.com/@ovipaulcs"><img src="resources/images/medium.png" alt="medium" width="20" height="20"></a>
+			<a class="interweb" href="mailto:ovipaulcs@gmail.com"><img src="resources/images/mail.png" alt="mail" width="20" height="20"></a>
+		</div>
+</body>
+</html>
