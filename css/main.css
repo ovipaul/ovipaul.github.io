@@ -57,3 +57,36 @@ p {
 h1, h2 {
     margin: 7px;
 }
+
+
+  
+/* #c1 {
+    position: relative; 
+    left: 200px; 
+    top: 0px;
+    } */
+/* #c2 {
+    position: relative;
+    left: -200px;
+    top: 0px;
+    } */
+.column{
+    float: left;
+    width: 50%;
+    }
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div>.interweb{
+    margin: 7px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.25s;
+}
+
+div>.interweb:hover{
+    top: -5px;
+}
