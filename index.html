@@ -1,148 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Ovi Paul's portfolio website">
-	<title>Ovi Paul</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="shortcut icon" href="favicon.ico" type="favicon/ico" style='border-radius: 50%;' />
-	
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Ovi Paul's portfolio website" />
+    <title>Ovi Paul</title>
 
-<body>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
-	<div class="row" >
+    <!-- Correct favicon type -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-		
-		<div class="column; centered" style="position: relative; background-color:white" >
-            <img src="resources/images/ovipaul.png" alt="ovipaul" width="180" height="180" style ="display:block; margin-left: auto; margin-right: auto; margin-top:20px; border-radius:50%">
-		</div>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Raleway, sans-serif;
+        background: transparent;
+      }
+      #gameCanvas {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+      }
+      .overlay {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.75);
+        z-index: -1;
+      }
+      .content {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+      }
+    </style>
+  </head>
 
+  <body>
+    <canvas id="gameCanvas"></canvas>
+    <div class="overlay"></div>
 
-        <div class="column, centered" style="position: relative; "  >
-            <h1 style="color:#191919;margin-left: 10px;font-size: 50px;font-family:Raleway-Bold;text-align:center;">Ovi Paul</h1>
-			<!-- <h2 style="color: #191919;margin-left: 15px;font-size: 25px;font-family:Raleway;text-align:center">Researcher | Educator | Developer</h2> -->
+    <!-- ===== PROFILE HEADER ===== -->
+    <div class="row">
+      <div
+        style="
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 20px auto 10px;
+        "
+      >
+        <img
+          src="resources/images/opaul.jpeg"
+          alt="ovipaul"
+          style="width: 100%; height: 100%; object-fit: cover"
+        />
+      </div>
 
-			<h2 style="color: #191919;margin-left: 15px;font-size: 25px;font-family:Raleway;text-align:center">Ph.D. Student at University of Houston</h2>
-			<div style ="text-align:center; margin-top:20px">
-				<a class="interweb" href="https://github.com/ovipaul"><img src="resources/images/github.png" alt="github" width="30" height="30"></a>
-				<a class="interweb" href="https://scholar.google.com/citations?user=W6Tee4QAAAAJ&hl=en"><img src="resources/images/scholars.png" alt="scholars" width="30" height="30"></a>
-				<a class="interweb" href="resources/docs/ovipaul.pdf"><img src="resources/images/cv.png" alt="mail" width="30" height="30"></a>
-				<a class="interweb" href="https://medium.com/@ovipaul"><img src="resources/images/medium.png" alt="medium" width="30" height="30"></a>
-				<a class="interweb" href="mailto:ovipaulcs@gmail.com"><img src="resources/images/mail.png" alt="mail" width="30" height="30"></a>	
-			</div> 
-		</div>
-        
-		
+      <!-- comma removed in class list -->
+      <div class="column centered" style="position: relative">
+        <h1
+          style="
+            color: #191919;
+            margin: 6px 0 0;
+            font-size: 50px;
+            font-family: Raleway-Bold;
+            text-align: center;
+          "
+        >
+          Ovi Paul
+        </h1>
+
+        <h2
+          style="
+            color: #191919;
+            margin: 6px 0 12px;
+            font-size: 25px;
+            font-family: Raleway;
+            text-align: center;
+          "
+        >
+          Ph.D. Candidate at University of Houston
+        </h2>
+
+        <div style="text-align: center; margin-top: 8px">
+          <a class="interweb" href="https://github.com/ovipaul">
+            <img src="resources/images/github.png" alt="github" width="30" height="30" />
+          </a>
+          <a class="interweb" href="https://scholar.google.com/citations?user=W6Tee4QAAAAJ&hl=en">
+            <img src="resources/images/scholars.png" alt="scholars" width="30" height="30" />
+          </a>
+          <a class="interweb" href="resources/docs/ovipaul.pdf">
+            <img src="resources/images/cv.png" alt="cv" width="30" height="30" />
+          </a>
+      <a class="interweb" href="https://linkedin.com/in/ovipaul"><img src="resources/images/linkedin.png" alt="linkedin" width="30" height="30" /></a>
+
+          <a class="interweb" href="mailto:ovipaulcs@gmail.com">
+            <img src="resources/images/mail.png" alt="mail" width="30" height="30" />
+          </a>
+        </div>
+      </div>
     </div>
 
-		<br>
-		<br>
-		<hr class="centered" style="border: 0.5px solid #dcdcdc;">
-		<br>
-		<h3 class="centered" style="color: #191919;font-size: 25px;font-family:Raleway-Bold">About Me</h3>
+    <hr class="centered" style="border: 0.5px solid #dcdcdc; margin: 14px auto" />
 
-		<p class="centered" style="font-family:Raleway; margin-top:10px">I am a Research Assistant, currently working at the  <a style="color: #191919" href="https://ncalm.cive.uh.edu/"><span class="blue-highlight"><u>National Center for Airborne Laser Mapping</u></span> </a>(NCALM), based at the University of Houston and is operated in partnership with the University of California, Berkeley. The center is supported by the National Science Foundation and is associated with the multi-disciplinary Geosensing Systems Engineering & Sciences department at the University of Houston.</p>
+<!-- ===== ABOUT ME ===== -->
+<h3 id="about" class="centered" style="color:#191919; font-size:25px; font-family:Raleway-Bold; margin:12px auto 6px">
+  Things About Me
+</h3>
 
+<p class="centered" style="font-family:Raleway; margin-top:6px">
+  I am a Research Assistant at the 
+  <a style="color:#191919" href="https://ncalm.cive.uh.edu/">
+    <span class="blue-highlight">National Center for Airborne Laser Mapping</span></a>, University of Houston. I hold a bachelor’s degree in Computer Science and have previously worked as a 
+  Research Assistant and Machine Learning Engineer before beginning my Ph.D. studies. My research focuses on 
+  Computer Vision, Machine Learning, and Remote Sensing, particularly in developing intelligent models for 
+  geospatial understanding and environmental analysis.
+</p>
 
-		 <p class="centered" style="font-family:Raleway; margin-top:10px">Besides programming, I like to read, write, watch movies, browse Reddit etc. Check out my favourite subreddit <a style="color: #191919" href="https://www.reddit.com/r/Glitch_in_the_Matrix/"><span class="blue-highlight"><u>r/Glitch_in_the_Matrix</u></span></a>.</p>
-		
-		
-		<hr class="centered" style="border: 0.5px solid #dcdcdc;">
-		<br>
+<!-- <p class="centered" style="font-family:Raleway; margin-top:6px">
+  Outside of research, I enjoy watching films, playing tennis, and drumming. I also like spending time on Reddit —
+  especially my favorite subreddit, 
+  <a style="color:#191919" href="https://www.reddit.com/r/Glitch_in_the_Matrix/">
+    <span class="blue-highlight">r/Glitch_in_the_Matrix</span>
+  </a>.
+</p> -->
 
-		<h3 class="centered" style="color: #191919;font-size: 25px;font-family:Raleway-Bold;">Research Papers</h3>
-		
-
-		<p class="centered" style="font-family:Raleway; margin-top:10px"><span class="orange-highlight">Remote Sensing Data Analysis on Bangladesh using Deep Learning</span><br>
-			<em>Proceedings</em>
-		<br>
-
-		
-		<p class="centered" style="font-family:Raleway; margin-top:10px"><span class="orange-highlight">A Deep-learning framework customized for novel categorization method to classify cities of the developing world</span><br>
-			<em>Sensors Journal | MDPI | 2021 (Proceedings)</em>
-		<br>	
-
-
-		<p class="centered" style="font-family:Raleway; margin-top:10px"><span class="orange-highlight">A Novel Disaster Image Data-set and Characteristics Analysis</span><a class="interweb" href="https://arxiv.org/abs/2107.01284"><img src="resources/images/arxiv.png" alt="arxiv" width="20" height="20"></a><a class="interweb" href="https://ieeexplore.ieee.org/abstract/document/9412504"><img src="resources/images/ieee.png" alt="ieee" width="20" height="20"></a><br>
-			<em>25th International Conference on Pattern Recognition | Milano, ITALY | 2021.</em>
-		<br>
-
-		<p class="centered" style="font-family:Raleway; margin-top:10px"><span class="orange-highlight">Deep-learning coupled with novel categorization method to classify the urban environment of the developing world</span><a class="interweb" href="https://arxiv.org/abs/2011.12847"><img src="resources/images/arxiv.png" alt="arxiv" width="20" height="20"></a><br>
-			<em>International Conference on Remote Sensing, Environment and Transportation Engineering | Paris, France | 2020.</em> 
-		<br>
+<hr class="centered" style="border:0.5px solid #dcdcdc; margin:14px auto" />
 
 
-		<p class="centered" style="font-family:Raleway; margin-top:10px"><span class="orange-highlight">LULC Segmentation of RGB Satellite Image Using FCN-8</span><a class="interweb" href="https://arxiv.org/abs/2008.10736"><img src="resources/images/arxiv.png" alt="arxiv" width="20" height="20"></a><br>
-			<em>SLAAI-International Conference on Artificial Intelligence | Belihuloya, Sri Lanka | 2019.</em>
-		<br>
+<!-- ===== EXPERIENCE ===== -->
+<!-- <h3 id="experience"
+  class="centered"
+  style="color:#191919; font-size:25px; font-family:Raleway-Bold"
+>
+  Places I've Worked 
+</h3>
 
+<p class="centered" style="font-family:Raleway; margin-top:6px">
+  <span class="orange-highlight">Graduate Research Assistant</span><br />
+  National Center for Airborne Laser Mapping (NCALM)<br />
+  <em>Aug 2023 – Present</em>
+</p>
 
-		<p class="centered" style="font-family:Raleway; margin-top:10px"><span class="orange-highlight">Image Pre-processing on NumtaDB for Bengali Handwritten Digit Recognition</span><a class="interweb" href="https://arxiv.org/abs/2008.07853"><img src="resources/images/arxiv.png" alt="arxiv" width="20" height="20"></a><a class="interweb" href="https://ieeexplore.ieee.org/document/8554910"><img src="resources/images/ieee.png" alt="ieee" width="20" height="20"></a><br>
-			<em>International Conference on	Bangla Speech and Language Processing | Sylhet, Bangladesh | 2018.</em> 
-		<hr class="centered" style="border: 0.5px solid #dcdcdc;">
-		<br>
+<p class="centered" style="font-family:Raleway; margin-top:6px">
+  <span class="orange-highlight">Machine Learning Engineer</span><br />
+  AinoviQ<br />
+  <em>Jan 2022 – Jun 2023</em>
+</p>
 
+<p class="centered" style="font-family:Raleway; margin-top:6px">
+  <span class="orange-highlight">Research Assistant</span><br />
+  Center for Computational & Data Sciences (CCDS)<br />
+  <em>Feb 2020 – Dec 2021</em>
+</p>
 
-		
-		<h3 class="centered" style="color: #191919;font-size: 25px;font-family:Raleway-Bold;">Things I've Made</h3>
-
-		<p class="centered" style="font-family:Raleway; margin-top:10px"><a style="color:#191919" ><span class="orange-highlight">Zenith</span></a>&nbsp;&nbsp;&nbsp;<a class="interweb" href="https://github.com/ovipaul/zenith"><img src="resources/images/github.png" alt="github" width="20" height="20"></a><a class="interweb" href="https://pypi.org/project/zenith/"><img src="resources/images/pypi.png" alt="pypi" width="20" height="20"></a><br>
-		<em>Zenith is a high-level Python library made for data processing. It's a tool for data manipulation and processing in Python ecosystem.</em></p>
-
-
-		<p class="centered" style="font-family:Raleway; margin-top:10px"><a style="color:#191919" ><span class="orange-highlight">Enigma Simulator</span></a>&nbsp;&nbsp;&nbsp;<a class="interweb" href="https://github.com/ovipaul"><img src="resources/images/github.png" alt="github" width="20" height="20"></a><a class="interweb" href="https://enigma-simulator.herokuapp.com/"><img src="resources/images/heroku.png" alt="heroku" width="20" height="20"></a><br>
-		<em>This is a simulator of Enigma Machine used in World War-II by the Nazi Germany. Enigma was a encryption device used by the Airforce and Navy during the war to communicate. The app was built with pure python using streamlit as the framework.</em></p>
+<hr class="centered" style="border:0.5px solid #dcdcdc; margin-top:10px" />
+<br /> -->
 
 
 
-		<p class="centered" style="font-family:Raleway"><a style="color: #191919" href="https://github.com/ovipaul/"><span class="blue-highlight"><u>View more on GitHub</u></span></a></p>
+    <!-- ===== THINGS I'VE MADE ===== -->
+    <h3 id="things-made" class="centered" style="color:#191919; font-size:25px; font-family:Raleway-Bold; margin:12px auto 6px">
+      Things I've Made
+    </h3>
 
-		<hr class="centered" style="border: 0.5px solid #dcdcdc;">
-		<br>
+    <p class="centered" style="font-family:Raleway; margin-top:8px">
+      <a style="color:#191919"><span class="orange-highlight">BathyNet</span></a>
+      &nbsp;&nbsp;
+      <a class="interweb" href="https://github.com/ovipaul/BathyNet">
+        <img src="resources/images/github.png" alt="github" width="20" height="20" />
+      </a><br />
+      <em>Built a deep learning system in PyTorch using PointCNN to classify seafloor features from 3D LAS point-cloud data,
+improving accuracy in bathymetric and underwater terrain mapping.</em>
+    </p>
+
+    <p class="centered" style="font-family:Raleway; margin-top:8px">
+      <a style="color:#191919"><span class="orange-highlight">Text2Map</span></a>
+      &nbsp;&nbsp;
+      <a class="interweb" href="https://github.com/ovipaul/Text2Map">
+        <img src="resources/images/github.png" alt="github" width="20" height="20" />
+      </a><br />
+      <em>Developed an NLP and geospatial analysis pipeline that uses BERT and Hugging Face Transformers to extract and
+geocode location entities from text, producing interactive spatial visualisations with GeoPandas and Folium</em>
+    </p>
+
+    <p class="centered" style="font-family:Raleway; margin-top:8px">
+  <a style="color:#191919"><span class="orange-highlight">Adaptive-Retracker</span></a>
+  &nbsp;&nbsp;
+  <a class="interweb" href="https://github.com/ovipaul/Adaptive-Retracker">
+    <img src="resources/images/github.png" alt="github" width="20" height="20" />
+  </a><br />
+  <em>
+A developing project that utilizes machine learning to analyze waveform altimetry data from various land types,
+    classify surface types, and perform adaptive retracking to enhance the accuracy of elevation estimates in complex terrains  
+</p>
+
+    <p class="centered" style="font-family:Raleway; margin-top:8px">
+      <a style="color:#191919"><span class="orange-highlight">Under-the-Sea</span></a>
+      &nbsp;&nbsp;
+      <a class="interweb" href="https://github.com/ovipaul/Under-the-Sea">
+        <img src="resources/images/github.png" alt="github" width="20" height="20" />
+      </a><br />
+      <em>Created an interactive web platform in Streamlit to simulate sea-level rise impacts using elevation and census data
+with PostGIS, GeoPandas, and Rasterio for large-scale spatial computations</em>
+    </p>
+
+    <p class="centered" style="font-family: Raleway; margin-top:8px">
+      <a style="color:#191919" href="https://github.com/ovipaul/">
+        <span class="blue-highlight">View more on GitHub</span>
+      </a>
+    </p>
+
+    <hr class="centered" style="border: 0.5px solid #dcdcdc; margin: 14px auto" />
+
+    <!-- ===== THINGS I'VE TAUGHT ===== -->
+    <h3 id="things-taught" class="centered" style="color:#191919; font-size:25px; font-family:Raleway-Bold; margin:12px auto 6px">
+      Things I've Taught
+    </h3>
+
+    <p class="centered" style="font-family:Raleway; margin-top:6px">
+      During my academic journey I taught and assisted a variety of courses as a Teaching Assistant.
+    </p>
+
+    <p class="centered" style="font-family:Raleway; font-weight:bold; margin-top:10px">
+      University of Houston
+    </p>
+    <p class="centered" style="font-family:Raleway; margin-top:4px">
+      CIVE 3397 – <span class="orange-highlight">Probability and Statistics for Engineers</span>
+    </p>
+
+    <p class="centered" style="font-family:Raleway; font-weight:bold; margin-top:10px">
+      Independent University, Bangladesh
+    </p>
+    <p class="centered" style="font-family:Raleway; margin-top:3px">
+      CSC317 – <span class="orange-highlight">Numerical Method</span>
+    </p>
+    <p class="centered" style="font-family:Raleway; margin-top:3px">
+      CSC204 – <span class="orange-highlight">Data Structure</span>
+    </p>
+    <p class="centered" style="font-family:Raleway; margin-top:3px">
+      CSC101 – <span class="orange-highlight">Introduction to Programming</span>
+    </p>
+
+    <hr class="centered" style="border: 0.5px solid #dcdcdc; margin: 14px auto" />
+
+
+    
+
+<!-- ===== THINGS I'VE WRITTEN ===== -->
+<h3 id="things-written" class="centered" style="color:#191919; font-size:25px; font-family:Raleway-Bold; margin:12px auto 6px">
+  Things I've Written
+</h3>
+
+<p class="centered" style="font-family:Raleway; margin-top:6px">
+  <span class="orange-highlight">Automated depth correction of bathymetric LiDAR point clouds using PointCNN semantic segmentation</span><br />
+  <em>Paul O, Ekhtari N, Glennie CL (2025). Frontiers Remote Sensing, 6:1521446.
+    <a class="interweb" href="https://doi.org/10.3389/frsen.2025.1521446">
+      <img src="resources/images/paper.png" alt="paper" width="24" height="24" style="vertical-align:middle" />
+    </a>
+  </em>
+</p>
+
+<p class="centered" style="font-family:Raleway; margin-top:6px">
+  <span class="orange-highlight">BOLM high resolution land use and land cover dataset and benchmark results for the rapidly developing City of Dhaka Bangladesh</span><br />
+  <em>Paul O, Nayem ABS, Sarker A, et al. (2025). Nature Scientific Reports, 15:37689.
+    <a class="interweb" href="https://doi.org/10.1038/s41598-025-21458-9">
+      <img src="resources/images/paper.png" alt="paper" width="24" height="24" style="vertical-align:middle" />
+    </a>
+  </em>
+</p>
+
+<p class="centered" style="font-family:Raleway; margin-top:6px">
+  <span class="orange-highlight">ROS-Pose Simplified object detection and planar pose estimation for rapid robotics application development</span><br />
+  <em>Paul SK, Paul O, Nicolescu M, Nicolescu M (2024). Software Impacts, 19:100624.
+    <a class="interweb" href="https://doi.org/10.1016/j.simpa.2024.100624">
+      <img src="resources/images/paper.png" alt="paper" width="24" height="24" style="vertical-align:middle" />
+    </a>
+  </em>
+</p>
+
+<p class="centered" style="font-family:Raleway; margin-top:6px">
+  <span class="orange-highlight">Image Pre-processing on NumtaDB for Bengali Handwritten Digit Recognition</span><br />
+  <em>Paul O (2018). International Conference on Bangla Speech and Language Processing (ICBSLP), Sylhet, Bangladesh, pp. 1–6.
+    <a class="interweb" href="https://doi.org/10.1109/ICBSLP.2018.8554910">
+      <img src="resources/images/paper.png" alt="paper" width="24" height="24" style="vertical-align:middle" />
+    </a>
+  </em>
+</p>
+
+    <p class="centered" style="font-family: Raleway; margin-top:8px">
+      <a style="color:#191919" href="https://scholar.google.com/citations?user=W6Tee4QAAAAJ&hl=en">
+        <span class="blue-highlight">View more on Google Scholar</span>
+      </a>
+    </p>
 
 
 
 
-		<h3 class="centered" style="color: #191919;font-size: 25px;font-family:Raleway-Bold;">Things I've Taught</h3>
-		
-		<p class="centered" style="font-family:Raleway; margin-top:10px">During my undergrad, I had taught these courses working as a TA. Mostly took lab classes but had some opportunity to take theory classes too.</p><br>
-
-		<p class="centered" style="font-family:Raleway; margin-top:10px"><a style="color:#191919" ><span class="orange-highlight">CSC317 - Numerical Method</span></a><br>
-		<em>- An introduction to modern numerical approximation techniques. Topics included floating point computation, accuracy and errors, solutions of single variable equations, interpolation, polynomial approximation, numerical differentiation and integration, methods for solving single variable equations, systems of linear equations, first order differential equations and initial value problems. MATLAB used to solve problem sets.</em></p>
-		
-		<p class="centered" style="font-family:Raleway; margin-top:10px"><a style="color:#191919" ><span class="orange-highlight">CSC204 - Data Structure</span></a><br>
-		<em>- Data representation and storage in elementary data structures like arrays and linked lists. Abstract Data Types (ADT): Stack, Queue, Priority Queue. Comparative analysis of different implementations of ADTs (Array based and linked list based).  Binary Search Tree (including red/black trees), Heap, Efficient  Priority  Queue (Heap based).  Complexity analysis of dictionary operations (insertion/deletion/search) on ADTs. Use of data structures in the design and implementation of smart searching and sorting algorithms (Binary search, Heap sort). Graphs (Connectivity graph, Directed and Undirected graph).</em></p>
-		
-		
-		<p class="centered" style="font-family:Raleway; margin-top:10px"><a style="color:#191919" ><span class="orange-highlight">CSC101 - Introduction to Programming</span></a><br>
-		<em>- Introduction to computer programming and modern software development paradigms using a high level language like C++. Topics range from first principles such as data types and conditional statements to functions, arrays and string manipulation. Primary emphasis is given to developing problem solving techniques and good programming style using an object-oriented approach.</em></p>
-				
-		
-		
-
-
-		<hr class="centered" style="border: 0.5px solid #dcdcdc;">
-		<br>
-
-
-
-
-		<h3 class="centered" style="color: #191919;font-size: 25px;font-family:Raleway-Bold;">Things I've Written</h3>
-		
-		<p class="centered" style="font-family:Raleway; margin-top:10px"><span class="orange-highlight">Making a Python Library with PyPI</span>&nbsp;&nbsp;&nbsp;<a class="interweb" href="https://medium.com/@ovipaul/making-a-python-library-with-pypi-29d07c6b5dee"><img src="resources/images/medium.png" alt="arxiv" width="20" height="20"></a><br>
-
-		<hr class="centered" style="border: 0.5px solid #dcdcdc;">
-		<br>
-
-
-		<div style ="text-align:center; margin-bottom:20px">
-			<!-- <a class="interweb" href="https://twitter.com/nadouttahere"><img src="resources/images/twitter.png" alt="twitter" width="20" height="20"></a> -->
-			<a class="interweb" href="https://github.com/ovipaul"><img src="resources/images/github.png" alt="github" width="20" height="20"></a>
-			<a class="interweb" href="https://linkedin.com/in/ovipaul"><img src="resources/images/linkedin.png" alt="linkedin" width="20" height="20"></a>
-			<a class="interweb" href="https://medium.com/@ovipaul"><img src="resources/images/medium.png" alt="medium" width="20" height="20"></a>
-			<a class="interweb" href="mailto:ovipaulcs@gmail.com"><img src="resources/images/mail.png" alt="mail" width="20" height="20"></a>
-		</div>
-</body>
+    <div style="text-align:center; margin: 10px 0 20px">
+      <a class="interweb" href="https://github.com/ovipaul"><img src="resources/images/github.png" alt="github" width="20" height="20" /></a>
+      <a class="interweb" href="https://linkedin.com/in/ovipaul"><img src="resources/images/linkedin.png" alt="linkedin" width="20" height="20" /></a>
+      <a class="interweb" href="https://scholar.google.com/citations?user=W6Tee4QAAAAJ&hl=en"><img src="resources/images/medium.png" alt="medium" width="20" height="20" /></a>
+      <a class="interweb" href="mailto:ovipaulcs@gmail.com"><img src="resources/images/mail.png" alt="mail" width="20" height="20" /></a>
+    </div>
+  </body>
 </html>

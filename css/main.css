@@ -1,92 +1,112 @@
+/* Local fonts without leading slashes and with swap */
 @font-face {
-    font-family: 'Raleway-Bold';
-    src: url('/resources/fonts/raleway-bold-webfont.woff2') format('woff2'),
-        url('/resources/fonts/Raleway-Bold.ttf') format("truetype"),
-        url('/resources/fonts/raleway-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'Raleway-Bold';
+  src: url('resources/fonts/raleway-bold-webfont.woff2') format('woff2'),
+       url('resources/fonts/Raleway-Bold.ttf') format('truetype'),
+       url('resources/fonts/raleway-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Raleway';
-    src: url('/resources/fonts/raleway-regular-webfont.woff2') format('woff2'),
-        url('/resources/fonts/resources/fonts/Raleway-Regular.ttf') format("truetype"),
-        url('/resources/fonts/raleway-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'Raleway';
+  src: url('resources/fonts/raleway-regular-webfont.woff2') format('woff2'),
+       url('resources/fonts/Raleway-Regular.ttf') format('truetype'),
+       url('resources/fonts/raleway-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
+/* Layout */
 .centered {
   margin: 0 auto;
   max-width: 700px;
-}  
-
-.interweb {
-    margin: 7px;
-    position: relative;
-    top: 0;
-    transition: top ease 0.25s;
-}
-
-.interweb:hover {
-    top: -5px;
-}
-
-.orange-highlight {
-    background: #ffd394;
-    padding: 0px 1px 0px 1px;
-    margin: -1px -1px;
-    display:inline-block;
-}
-
-.blue-highlight {
-    background: #ace7be;
-    padding: 0px 1px 0px 1px;
-    margin: -1px -1px;
-    display:inline-block;
 }
 
 p {
-  font-size:16px;
+  font-size: 16px;
   line-height: 1.5;
   color: #191919;
-  padding-bottom: 15px;
+  margin: 0;
+  padding: 0 0 8px;
 }
 
 h1, h2 {
-    margin: 7px;
+  margin: 6px 0;
 }
 
+.column {
+  float: left;
+  width: 50%;
+}
 
-  
-/* #c1 {
-    position: relative; 
-    left: 200px; 
-    top: 0px;
-    } */
-/* #c2 {
-    position: relative;
-    left: -200px;
-    top: 0px;
-    } */
-.column{
-    float: left;
-    width: 50%;
-    }
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
-div>.interweb{
-    margin: 7px;
-    position: relative;
-    top: 0;
-    transition: top ease 0.25s;
+/* Icons */
+.interweb {
+  margin: 6px;
+  position: relative;
+  top: 0;
+  transition: top 0.25s ease;
+}
+.interweb:hover { top: -3px; }
+
+/* Highlights strictly inline */
+.orange-highlight {
+  background: #ffd394;
+  padding: 0 2px;
+  margin: 0;
+  display: inline;
+  border-radius: 2px;
 }
 
-div>.interweb:hover{
-    top: -5px;
+.blue-highlight {
+  background: #ace7be;
+  padding: 0 2px;
+  margin: 0;
+  display: inline;
+  border-bottom: 1px solid #191919; /* replaces <u> underline */
+  text-decoration: none; /* prevents inherited underline */
 }
+
+
+/* Better vertical rhythm for section headers and rules */
+hr.centered {
+  max-width: 700px;
+}
+
+/* Optional small tweaks for mobile */
+@media (max-width: 768px) {
+  .column {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* make the column truly centered */
+.column.centered {
+  float: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* center icons in one row on all servers */
+.icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* small nudge for consistent visual spacing */
+.interweb { display: inline-block; }
+a[href] { text-decoration: none; }
